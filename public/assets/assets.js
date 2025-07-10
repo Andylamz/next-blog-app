@@ -6,7 +6,7 @@ export const blog_data = [
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
     image: "/assets/blog_pic_1.jpg",
     date: Date.now(),
-    category: "Javascript",
+    category: "JavaScript",
     author: "Rudy Green",
   },
   {
@@ -36,7 +36,7 @@ export const blog_data = [
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
     image: "/assets/blog_pic_4.jpg",
     date: Date.now(),
-    category: "Javascript",
+    category: "JavaScript",
     author: "Olivia Thompson",
   },
   {
@@ -51,12 +51,12 @@ export const blog_data = [
   },
   {
     id: 6,
-    title: "How To Set Up Personal Portfolio With Javascript",
+    title: "How To Set Up Personal Portfolio With JavaScript",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
     image: "/assets/blog_pic_6.jpg",
     date: Date.now(),
-    category: "Javascript",
+    category: "JavaScript",
     author: "Sophia Martinez",
   },
   {
@@ -86,7 +86,7 @@ export const blog_data = [
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
     image: "/assets/blog_pic_9.jpg",
     date: Date.now(),
-    category: "Javascript",
+    category: "JavaScript",
     author: "Michael Clark",
   },
   {
@@ -146,7 +146,7 @@ export const blog_data = [
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
     image: "/assets/blog_pic_15.jpg",
     date: Date.now(),
-    category: "Javascript",
+    category: "JavaScript",
     author: "Alexander Scott",
   },
   {
