@@ -8,6 +8,7 @@ export const blog_data = [
     date: Date.now(),
     category: "JavaScript",
     author: "Rudy Green",
+    profile: "/assets/profile1.png",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const blog_data = [
     date: Date.now(),
     category: "Next.js",
     author: "Emily Carter",
+    profile: "/assets/profile2.png",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const blog_data = [
     date: Date.now(),
     category: "Next.js",
     author: "James Anderson",
+    profile: "/assets/profile3.png",
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const blog_data = [
     date: Date.now(),
     category: "JavaScript",
     author: "Olivia Thompson",
+    profile: "/assets/profile4.png",
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ export const blog_data = [
     date: Date.now(),
     category: "React",
     author: "Daniel Wilson",
+    profile: "/assets/profile5.png",
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ export const blog_data = [
     date: Date.now(),
     category: "JavaScript",
     author: "Sophia Martinez",
+    profile: "/assets/profile6.png",
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ export const blog_data = [
     date: Date.now(),
     category: "React",
     author: "Benjamin Harris",
+    profile: "/assets/profile7.png",
   },
   {
     id: 8,
@@ -78,6 +85,7 @@ export const blog_data = [
     date: Date.now(),
     category: "React",
     author: "Ava Robinson",
+    profile: "/assets/profile8.png",
   },
   {
     id: 9,
@@ -88,6 +96,7 @@ export const blog_data = [
     date: Date.now(),
     category: "JavaScript",
     author: "Michael Clark",
+    profile: "/assets/profile9.png",
   },
   {
     id: 10,
@@ -98,6 +107,7 @@ export const blog_data = [
     date: Date.now(),
     category: "React",
     author: "Mia Lewis",
+    profile: "/assets/profile10.png",
   },
   {
     id: 11,
@@ -108,6 +118,7 @@ export const blog_data = [
     date: Date.now(),
     category: "React",
     author: "Willian Turner",
+    profile: "/assets/profile11.png",
   },
   {
     id: 12,
@@ -118,6 +129,7 @@ export const blog_data = [
     date: Date.now(),
     category: "Next.js",
     author: "Isabella Walker",
+    profile: "/assets/profile12.png",
   },
   {
     id: 13,
@@ -128,6 +140,7 @@ export const blog_data = [
     date: Date.now(),
     category: "Next.js",
     author: "Ethan Young",
+    profile: "/assets/profile13.png",
   },
   {
     id: 14,
@@ -138,6 +151,7 @@ export const blog_data = [
     date: Date.now(),
     category: "React",
     author: "Charlotte Hall",
+    profile: "/assets/profile14.png",
   },
   {
     id: 15,
@@ -148,6 +162,7 @@ export const blog_data = [
     date: Date.now(),
     category: "JavaScript",
     author: "Alexander Scott",
+    profile: "/assets/profile15.png",
   },
   {
     id: 16,
@@ -158,5 +173,6 @@ export const blog_data = [
     date: Date.now(),
     category: "React",
     author: "Noah Morgan",
+    profile: "/assets/profile16.png",
   },
 ];

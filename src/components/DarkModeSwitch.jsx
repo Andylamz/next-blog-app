@@ -17,13 +17,17 @@ function DarkModeSwitch() {
         (theme === "dark" ? (
           <FontAwesomeIcon
             icon={faSun}
-            className="hover:text-amber-500 cursor-pointer text-[20px] mr-5 transition-colors duration-300"
+            className="hover:text-amber-500 cursor-pointer text-[20px] mr-5 transition-colors duration-300 outline-0"
+            tabIndex={0}
+            aria-label="light mode button"
             onClick={() => setTheme("light")}
           />
         ) : (
           <FontAwesomeIcon
             icon={faMoon}
-            className="hover:text-yellow-400 cursor-pointer text-[20px] mr-5 transition-colors duration-300"
+            className="hover:text-yellow-400 cursor-pointer text-[20px] mr-5 transition-colors duration-300 outline-0"
+            tabIndex={0}
+            aria-label="dark mode button"
             onClick={() => setTheme("dark")}
           />
         ))}

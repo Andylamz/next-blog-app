@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { blog_data } from "../../public/assets/assets";
 import BlogItem from "./BlogItem";

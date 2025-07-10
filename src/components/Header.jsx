@@ -1,16 +1,19 @@
 import Image from "next/image";
 import logo from "/public/assets/logo.png";
 import DarkModeSwitch from "./DarkModeSwitch";
+import Link from "next/link";
 function Header() {
   return (
     <div className="py-5 px-5 md:px-12 lg:px-28">
       <div className="flex justify-between items-center">
-        <Image
-          src={logo}
-          width={120}
-          alt="logo"
-          className="w-[130px] sm:w-auto"
-        />
+        <Link href="/">
+          <Image
+            src={logo}
+            width={130}
+            alt="logo"
+            className="w-[130px] sm:w-auto"
+          />
+        </Link>
         <div className="flex justify-between items-center">
           <button className="flex items-center gap-2 font-extrabold py-1 px-3 sm:py-3 sm:px-6 border-solid border-4 border-[#fc5d0f] mr-5 ">
             Get Started
