@@ -10,9 +10,11 @@ async function LoadDB() {
 LoadDB();
 
 export async function GET(request) {
-  return NextResponse.json({ msg: "API working" });
+  const blogs = await BlogModel.find();
+  return NextResponse.json({ blogs });
 }
 
+// API for uploading blogs
 export async function POST(req) {
   const formData = await req.formData();
   const timestamp = Date.now();
@@ -37,5 +39,5 @@ export async function POST(req) {
   await BlogModel.create(blogData);
   console.log("Blog Saved");
 
-  return NextResponse.json({ successful: true, msg: "Blog Added" });
+  return NextResponse.json({ success: true, msg: "Blog Added" });
 }

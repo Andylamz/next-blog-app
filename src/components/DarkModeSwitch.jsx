@@ -15,21 +15,23 @@ function DarkModeSwitch() {
     <div>
       {mounted &&
         (theme === "dark" ? (
-          <FontAwesomeIcon
-            icon={faSun}
-            className="hover:text-amber-500 cursor-pointer text-[20px] mr-5 transition-colors duration-300 outline-0 "
-            tabIndex={0}
-            aria-label="light mode button"
-            onClick={() => setTheme("light")}
-          />
+          <div onClick={() => setTheme("light")} className="w-full h-full">
+            <FontAwesomeIcon
+              icon={faSun}
+              className="hover:text-amber-500 cursor-pointer text-[20px] mr-5 transition-colors duration-300 outline-0"
+              tabIndex={0}
+              aria-label="light mode button"
+            />
+          </div>
         ) : (
-          <FontAwesomeIcon
-            icon={faMoon}
-            className="hover:text-yellow-400 cursor-pointer text-[20px] mr-5 transition-colors duration-300 outline-0 "
-            tabIndex={0}
-            aria-label="dark mode button"
-            onClick={() => setTheme("dark")}
-          />
+          <div onClick={() => setTheme("dark")} className="w-full h-full">
+            <FontAwesomeIcon
+              icon={faMoon}
+              className="hover:text-yellow-400 cursor-pointer text-[20px] mr-5 transition-colors duration-300 outline-0 "
+              tabIndex={0}
+              aria-label="dark mode button"
+            />
+          </div>
         ))}
     </div>
   );
