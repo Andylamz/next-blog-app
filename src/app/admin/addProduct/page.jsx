@@ -32,6 +32,7 @@ function page() {
     formData.append("authorImg", data.authorImg);
     formData.append("image", image);
     const res = await axios.post("/api/blog", formData);
+
     if (res.data.success) {
       toast.success(res.data.msg);
       setImage(false);
@@ -79,7 +80,7 @@ function page() {
           onChange={onChangeHandler}
           value={data.title}
           type="text"
-          className="w-full  md:w-[400px] mt-4 px-4 py-3 border"
+          className="w-full md:w-[400px] mt-4 px-4 py-3 border"
           placeholder="Blog Title"
           required
         />

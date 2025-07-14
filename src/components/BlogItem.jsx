@@ -7,7 +7,12 @@ function BlogItem({ image, title, description, category, id }) {
     <div className="flex flex-col justify-between group max-w-[420px] sm:max-w-[400px] border border-[#e9e9e9] dark:border-gray-400 rounded-xl overflow-hidden hover:-translate-y-5 transform transition-transform duration-500">
       <Link href={`/blogs/${id}`}>
         <div className="max-w-[420px] h-[300px] sm:max-w-[400px] relative border-b-1 border-[#e9e9e9]">
-          <Image src={image} alt={id} fill className="object-cover" />
+          <Image
+            src={image}
+            fill
+            className="object-cover"
+            alt={`Cover photo of ${title}`}
+          />
         </div>
       </Link>
 

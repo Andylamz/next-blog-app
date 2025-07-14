@@ -9,12 +9,14 @@ function Sidebar() {
     <div className="hidden md:block">
       <div className="flex flex-col justify-between min-h-[1000px]  bg-[#0f0f0f] pb-50 sm:pb-0">
         <div className="px-2 sm:pl-12 py-6">
-          <Image
-            src="/assets/logo.png"
-            width={120}
-            height={1}
-            alt="Andy Blog"
-          />
+          <Link href="/">
+            <Image
+              src="/assets/logo.png"
+              width={120}
+              height={1}
+              alt="Andy Blog"
+            />
+          </Link>
           <div className="w-36  sm:w-60 h-[100vh] relative py-12 pr-0 sm:pr-12">
             <Link
               href="/admin/addProduct"

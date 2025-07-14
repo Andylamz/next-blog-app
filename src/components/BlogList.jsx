@@ -1,12 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { blog_data } from "../../public/assets/assets";
 import BlogItem from "./BlogItem";
+import axios from "axios";
 
 function BlogList() {
   const [menu, setMenu] = useState("All");
+  const [blogs, setBlogs] = useState([]);
   const [selected, setSelected] = useState("All");
+
+  async function fetchBlogs() {
+    const res = await axios.get("/api/blog");
+    setBlogs(res.data.blogs);
+    console.log(res.data.blogs);
+  }
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
 
   function handleOnClick(element) {
     setMenu(element);
@@ -14,7 +26,7 @@ function BlogList() {
   }
   console.log(menu);
   return (
-    <div className="transition-all duration-500">
+    <div className="transition-all duration-500 min-h-[180px]">
       <div className="flex justify-center gap-6 my-10 px-3 sm:px-0  ">
         <button
           className={`py-1 px-2 sm:px-6 rounded-sm transition-colors duration-200 cursor-pointer hover:bg-[#fc5d0f] hover:text-white dark:hover:bg-white dark:hover:text-black ${
@@ -58,11 +70,13 @@ function BlogList() {
         </button>
       </div>
       <div className="flex flex-wrap justify-around gap-1 gap-y-10 mb-16 sm:mx-24 px-3 sm:px-0 transition-all duration-700">
+        {!blogs.length && <p>No Posts</p>}
         {menu === "All" &&
-          blog_data.map((blog) => (
+          blogs.length > 0 &&
+          blogs.map((blog) => (
             <BlogItem
-              key={blog.id}
-              id={blog.id}
+              key={blog._id}
+              id={blog._id}
               image={blog.image}
               title={blog.title}
               description={blog.description}
@@ -70,14 +84,15 @@ function BlogList() {
             />
           ))}
         {menu === "JavaScript" &&
-          blog_data
+          blogs.length > 0 &&
+          blogs
             .filter((blog) => {
               return blog.category === "JavaScript";
             })
             .map((blog) => (
               <BlogItem
-                key={blog.id}
-                id={blog.id}
+                key={blog._id}
+                id={blog._id}
                 image={blog.image}
                 title={blog.title}
                 description={blog.description}
@@ -85,14 +100,15 @@ function BlogList() {
               />
             ))}
         {menu === "React" &&
-          blog_data
+          blogs.length > 0 &&
+          blogs
             .filter((blog) => {
               return blog.category === "React";
             })
             .map((blog) => (
               <BlogItem
-                key={blog.id}
-                id={blog.id}
+                key={blog._id}
+                id={blog._id}
                 image={blog.image}
                 title={blog.title}
                 description={blog.description}
@@ -100,14 +116,15 @@ function BlogList() {
               />
             ))}
         {menu === "Next.js" &&
-          blog_data
+          blogs.length > 0 &&
+          blogs
             .filter((blog) => {
               return blog.category === "Next.js";
             })
             .map((blog) => (
               <BlogItem
-                key={blog.id}
-                id={blog.id}
+                key={blog._id}
+                id={blog._id}
                 image={blog.image}
                 title={blog.title}
                 description={blog.description}

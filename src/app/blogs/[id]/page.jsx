@@ -5,17 +5,19 @@ import Image from "next/image";
 import DarkModeSwitch from "@/components/DarkModeSwitch";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import axios from "axios";
 
 function page({ params }) {
   const { id } = use(params);
-  const [data, setdata] = useState(null);
-  function fetchBlogData() {
-    for (let blog of blog_data) {
-      if (Number(id) === blog.id) {
-        setdata(blog);
-        break;
-      }
-    }
+  const [data, setdata] = useState([]);
+
+  async function fetchBlogData() {
+    const res = await axios.get("/api/blog", {
+      params: {
+        id,
+      },
+    });
+    setdata(res.data.blog);
   }
   console.log(data);
   useEffect(() => {
@@ -46,13 +48,15 @@ function page({ params }) {
             </div>
           </div>
           <div className="text-center my-24">
-            <Image
-              src={data.profile}
-              width={60}
-              height={60}
-              alt={`${data.author} profile picture`}
-              className="mx-auto  border border-black dark:border-white rounded-full"
-            />
+            {data.authorImg ? (
+              <Image
+                src={data.authorImg}
+                width={60}
+                height={60}
+                alt={`${data.author} profile picture`}
+                className="mx-auto  border border-black dark:border-white rounded-full"
+              />
+            ) : null}
             <p className="mt-3 mb-4 pb-2 text-lg max-w-[740px] mx-auto">
               {data.author}
             </p>
@@ -62,13 +66,15 @@ function page({ params }) {
           </div>
         </div>
         <div className="mx-5 max-w-[800px] md:mx-auto mt-[-60px] mb-30">
-          <Image
-            className="border-4 border-[#e9e9e9]"
-            src={data.image}
-            width={1280}
-            height={720}
-            alt=""
-          />
+          {data.image ? (
+            <Image
+              className="border-4 border-[#e9e9e9]"
+              src={data.image}
+              width={1280}
+              height={720}
+              alt=""
+            />
+          ) : null}
           <h1 className="my-8 text-[26px] font-semibold">Overview</h1>
           <p>{data.description}</p>
           <h3 className="my-5 text-[18px] font-semibold">Features</h3>
