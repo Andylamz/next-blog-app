@@ -36,7 +36,7 @@ function Navbar() {
           </span>
 
           {isOpen && (
-            <div className="flex flex-col text-center absolute top-[64px] w-full bg-[#0f0f0f] dark:hover  ">
+            <div className="flex flex-col text-center absolute top-[64px] w-full z-10 bg-[#0f0f0f] ">
               <Link
                 className="py-5 cursor-pointer bg-[#0f0f0f] hover:bg-black"
                 href="/admin/addProduct"

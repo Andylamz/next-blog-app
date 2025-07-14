@@ -115,7 +115,7 @@ function page() {
           type="submit"
           className="mt-8 w-40 h-12 text-white bg-black dark:bg-[#fc5d0f]  transition-colors duration-500 cursor-pointer"
         >
-          Add
+          + ADD
         </button>
       </form>
     </>

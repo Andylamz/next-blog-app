@@ -1,8 +1,9 @@
 "use client";
 import BlogTableItem from "@/components/AdminComponents/BlogTableItem";
-import LoadingCom from "@/components/LoadingCom";
+
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 function page() {
   const [blogs, setBlogs] = useState([]);
@@ -22,6 +23,17 @@ function page() {
       return setIsLoading(false);
     }
   }
+
+  async function deleteBlog(mongoId) {
+    const res = await axios.delete("/api/blog", {
+      params: {
+        id: mongoId,
+      },
+    });
+    toast.success(res.data.msg);
+    fetchBlogs();
+  }
+
   useEffect(() => {
     fetchBlogs();
   }, []);
@@ -64,6 +76,7 @@ function page() {
                   authorImg={blog.authorImg}
                   author={blog.author}
                   title={blog.title}
+                  deleteBlog={deleteBlog}
                 />
               ))}
           </tbody>
