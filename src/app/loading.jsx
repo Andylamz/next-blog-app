@@ -1,12 +1,7 @@
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import LoadingCom from "@/components/LoadingCom";
 
 function Loading() {
-  return (
-    <div>
-      <FontAwesomeIcon icon={faSpinner} spinPulse />
-    </div>
-  );
+  return <LoadingCom />;
 }
 
 export default Loading;

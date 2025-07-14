@@ -14,12 +14,14 @@ function Navbar() {
   return (
     <div className="md:hidden block">
       <div className="flex justify-center w-full bg-[#0f0f0f] py-10 mb-5">
-        <Image
-          src="/assets/logo.png"
-          width={120}
-          height={120}
-          alt="Andy Blog logo"
-        />
+        <Link href="/">
+          <Image
+            src="/assets/logo.png"
+            width={120}
+            height={120}
+            alt="Andy Blog logo"
+          />
+        </Link>
       </div>
 
       <div
@@ -30,7 +32,7 @@ function Navbar() {
       >
         <div className="relative flex flex-col w-full text-center ">
           <span className="py-5 bg-[#0f0f0f] hover:bg-black cursor-pointer">
-            Menu <FontAwesomeIcon icon={faCaretDown} />
+            Menu
           </span>
 
           {isOpen && (

@@ -1,7 +1,19 @@
 import Navbar from "@/components/AdminComponents/Navbar";
 import Sidebar from "@/components/AdminComponents/Sidebar";
+import LoadingCom from "@/components/LoadingCom";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import { Suspense } from "react";
 import { ToastContainer } from "react-toastify";
+
+export const metadata = {
+  title: "Admin Dashboard",
+  icons: { icon: "/favicon-96x96.png" },
+  description:
+    "The page is the admin dashboard, where admin can add blogs, view blog list and manage subscriptions",
+};
+
 function Layout({ children }) {
   return (
     <>
@@ -21,7 +33,7 @@ function Layout({ children }) {
               alt="profile picture"
             />
           </div>
-          {children}
+          <Suspense fallback={<LoadingCom />}>{children}</Suspense>
         </div>
       </div>
     </>

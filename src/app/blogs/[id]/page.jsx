@@ -19,7 +19,7 @@ function page({ params }) {
     });
     setdata(res.data.blog);
   }
-  console.log(data);
+
   useEffect(() => {
     fetchBlogData();
   }, []);
