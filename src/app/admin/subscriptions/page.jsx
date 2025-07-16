@@ -22,7 +22,7 @@ function page() {
   // DELETE
   async function deleteEmail(mongoId) {
     const res = await axios.delete("/api/email", { params: { id: mongoId } });
-    console.log(res);
+
     if (res.data.success) {
       toast.success(res.data.msg);
       fetchEmails();

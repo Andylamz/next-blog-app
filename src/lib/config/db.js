@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 export async function connectDB() {
   try {
     await mongoose.connect(
-      "mongodb+srv://andylamytcoding:Q6Z9dXuyAr2fb4vk@cluster0.sbpddni.mongodb.net/blog-app"
+      `mongodb+srv://andylamytcoding:${process.env.MONGODB_API_KEY}@cluster0.sbpddni.mongodb.net/blog-app`
     );
     console.log("Connected to Database");
   } catch (err) {

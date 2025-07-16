@@ -13,7 +13,6 @@ function BlogList() {
   async function fetchBlogs() {
     const res = await axios.get("/api/blog");
     setBlogs(res.data.blogs);
-    console.log(res.data.blogs);
   }
 
   useEffect(() => {
@@ -24,7 +23,6 @@ function BlogList() {
     setMenu(element);
     setSelected(element);
   }
-  console.log(menu);
   return (
     <div className="transition-all duration-500 min-h-[180px]">
       <div className="flex justify-center gap-6 my-10 px-3 sm:px-0  ">

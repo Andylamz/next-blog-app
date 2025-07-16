@@ -1,9 +1,7 @@
 "use client";
-import { use, useEffect, useState } from "react";
-import { blog_data } from "../../../../public/assets/assets";
+import { Suspense, use, useEffect, useState } from "react";
 import Image from "next/image";
 import DarkModeSwitch from "@/components/DarkModeSwitch";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 import axios from "axios";
 
@@ -30,20 +28,24 @@ function page({ params }) {
         <div className="py-5 px-5 md:px-12 lg:px-28 border-b-4 border-[#e9e9e9] transition-colors duration-500">
           <div className="flex justify-between items-center">
             <Link href="/">
-              <Image
-                src="/assets/logo.png"
-                height={0}
-                width={130}
-                alt="logo"
-                className="w-[130px] sm:w-auto"
-                tabIndex={0}
-                aria-label="Andy Blog logo"
-              />
+              <Suspense fallback={<p>Loading...</p>}>
+                <Image
+                  src="/assets/logo.png"
+                  height={0}
+                  width={130}
+                  alt="logo"
+                  className="w-[130px] sm:w-auto"
+                  tabIndex={0}
+                  aria-label="Andy Blog logo"
+                />
+              </Suspense>
             </Link>
             <div className="flex justify-between items-center">
-              <button className="flex items-center gap-2 font-extrabold py-1 px-3 sm:py-3 sm:px-6 border-solid border-4 border-[#fc5d0f] mr-5 ">
-                Get Started
-              </button>
+              <Link href="/admin">
+                <button className="flex items-center gap-2 font-extrabold py-1 px-3 sm:py-3 sm:px-6 border-solid border-4 cursor-pointer border-[#fc5d0f] mr-5 hover:bg-[#fc5d0f] transition-colors duration-500 hover:text-white">
+                  Dashboard
+                </button>
+              </Link>
               <DarkModeSwitch />
             </div>
           </div>
@@ -65,7 +67,7 @@ function page({ params }) {
             </h1>
           </div>
         </div>
-        <div className="mx-5 max-w-[800px] md:mx-auto mt-[-60px] mb-30">
+        <div className="mx-5 max-w-[800px] md:mx-auto mt-[-60px] mb-30 sm:p-5">
           {data.image ? (
             <Image
               className="border-4 border-[#e9e9e9]"

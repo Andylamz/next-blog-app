@@ -19,7 +19,7 @@ function Footer() {
     const formData = new FormData();
     formData.append("email", email);
     const res = await axios.post("/api/email", formData);
-    console.log(res.data);
+
     if (res.data.success) {
       toast.success(res.data.msg);
       setEmail("");

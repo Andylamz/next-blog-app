@@ -16,11 +16,9 @@ function page() {
     try {
       const res = await axios.get("/api/blog");
       setBlogs(res.data.blogs);
-      console.log(res.data.blogs);
       return;
     } catch (err) {
-      console.log(err.message);
-      return;
+      return false;
     } finally {
       return setIsLoading(false);
     }

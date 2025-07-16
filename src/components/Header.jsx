@@ -15,8 +15,8 @@ function Header() {
           />
         </Link>
         <div className="flex justify-between items-center">
-          <Link href="/admin" target="_blank">
-            <button className="flex items-center gap-2 font-extrabold py-1 px-3 sm:py-3 sm:px-6 border-solid border-4 cursor-pointer border-[#fc5d0f] mr-5 ">
+          <Link href="/admin">
+            <button className="flex items-center gap-2 font-extrabold py-1 px-3 sm:py-3 sm:px-6 border-solid border-4 cursor-pointer border-[#fc5d0f] mr-5 hover:bg-[#fc5d0f] transition-colors duration-500 hover:text-white">
               Dashboard
             </button>
           </Link>

@@ -43,7 +43,7 @@ function page() {
         authorImg: "/assets/profile1.png",
       });
     } else {
-      toast.error("Error");
+      toast.error(res.data.msg);
     }
   };
 
