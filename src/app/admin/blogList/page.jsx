@@ -1,5 +1,7 @@
 "use client";
 import BlogTableItem from "@/components/AdminComponents/BlogTableItem";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -63,7 +65,7 @@ function page() {
             {isLoading && (
               <tr>
                 <td className="text-center pt-8" colSpan="4">
-                  Loading Data...
+                  <FontAwesomeIcon icon={faSpinner} spinPulse />
                 </td>
               </tr>
             )}

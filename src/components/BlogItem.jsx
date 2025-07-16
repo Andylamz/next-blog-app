@@ -23,7 +23,7 @@ function BlogItem({ image, title, description, category, id }) {
             {title}
           </h5>
 
-          <p className="mb-3 text-sm tracking-tight text-gray-500">
+          <p className="mb-3 text-sm tracking-tight text-gray-500 overflow-ellipsis line-clamp-3">
             {description}
           </p>
           <span className="inline-flex items-center py-2 font-semibold text-center text-gray-400">

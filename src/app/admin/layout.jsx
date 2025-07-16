@@ -1,8 +1,6 @@
 import Navbar from "@/components/AdminComponents/Navbar";
 import Sidebar from "@/components/AdminComponents/Sidebar";
 import LoadingCom from "@/components/LoadingCom";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { Suspense } from "react";
 import { ToastContainer } from "react-toastify";
@@ -18,7 +16,7 @@ function Layout({ children }) {
   return (
     <>
       <div className="flex dark:bg-[#272727] transition-colors duration-500 ">
-        <ToastContainer />
+        {/* <ToastContainer /> */}
         <Sidebar />
         <div className="flex flex-col w-full min-h-[1000px] mb-50 md:mb-0">
           <Navbar />

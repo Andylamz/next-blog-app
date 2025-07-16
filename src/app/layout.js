@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ToastContainer } from "react-toastify";
 import Footer from "@/components/Footer";
 
 const poppins = Poppins({
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         className={`${poppins.className} text-gray-700 bg-white dark:text-gray-300 dark:bg-black min-h-screen select-none transition-colors duration-500`}
       >
         <ThemeProvider attribute="class" defaultTheme="system">
+          <ToastContainer />
           {children}
           <Footer />
         </ThemeProvider>
