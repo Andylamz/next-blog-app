@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Blog Application - Full Stack with Next.js 15
 
-## Getting Started
+This is a full-stack blog application built with the Next.js 15 App Router. It features a responsive user interface, scalable image handling through Cloudinary, and supports both light and dark themes. The application includes an admin dashboard for managing blog content and newsletter subscriptions.
 
-First, run the development server:
+  
+# Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  - Display a list of blog posts with title, image, and preview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  - View full blog post details by selecting a post card
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+  - Email subscription form allowing users to subscribe to blog updates
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  - Admin dashboard for:
+    - Creating new blog posts
+    - Deleting existing posts
 
-## Learn More
+  - Viewing and managing email subscribers
 
-To learn more about Next.js, take a look at the following resources:
+  - Toggle between light and dark themes using next-themes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  - Image uploads and hosting handled by Cloudinary
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  - Per-page metadata configured for SEO optimisation
 
-## Deploy on Vercel
+  - Custom site favicon for consistent branding
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  - API routes implemented using Next.js built-in functionality
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  - Data fetching managed via Axios
+
+# Tech Stack
+
+  - Frontend
+
+    - Next.js 15 (App Router)
+
+    - Tailwind CSS
+
+    - next-themes
+
+  - Backend
+
+    - Next.js API Routes
+
+    - MongoDB for data persistence (posts and subscriptions)
+
+    - Cloudinary for image storage and delivery
+
+  - Additional Tools
+
+    - Axios for HTTP requests
+
+    - Environment variables managed via .env
+   
+# Deployment
+
+This application is ready to deploy on Vercel:
+
+    - Vercel will automatically run next build during deployment
+
+    - Environment variables must be configured in the Vercel project settings
+
+    - Legacy local images under /public/uploads/ are included in the build output
+
+    - New images are stored and served from Cloudinary
+
+# Demo
+
+The demo can be viewed [here](https://next-blog-app-blond-rho.vercel.app/)
